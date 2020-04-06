@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Test</title>
+	</head>
+	<body>
+		<h3>Please, fill form!</h3>
+
+		<p>Name</p>
+		<input id="pib" type="text">
+
+		<p>Login</p>
+		<input id="log" type="text">
+
+		<p>Password</p>
+		<input id="pass" type="password">
+
+		<p>Email</p>
+		<input id="email" type="email">
+
+		<p>Country</p>
+		<select name="Country" id="country">
+			<option>Ukrain</option>
+			<option>USA</option>
+			<option>Italy</option>
+			<option>France</option>
+			<option>Spain</option>
+		</select>
+
+		<p>Age</p>
+		<input id="age" type="number" min="1">
+
+		<br>
+
+		<p>For cheking form click on the button:</p>
+			
+		<button id="butn">Click!!!</button>
+
+		<br>
+
+		
+
+		<div id="result_name"></div>
+		<div id="result_log"></div>
+		<div id="result_pass"></div>
+		<div id="result_email"></div>
+		<div id="result_country"></div>
+		<div id="result1_age"></div>
+
+		<script type="text/javascript">
+			
+			function Result(){
+
+				let pib = document.getElementById('pib').value;
+				let log = document.getElementById('log').value;
+				let pass = document.getElementById('pass').value;
+				let email = document.getElementById('email').value;
+				let country = document.getElementById('country').value;
+				let age = document.getElementById('age').value;
+
+				document.getElementById('result_name').innerHTML = 'Your name: ' + pib;
+				document.getElementById('result_log').innerHTML = 'Your login; ' + log;
+				document.getElementById('result_pass').innerHTML = 'Your pass: Uppps. Sorry. I can not say you password this person!';
+				document.getElementById('result_email').innerHTML = 'Your E-mail: ' + email;
+				document.getElementById('result_country').innerHTML = 'Your Country: '+ country;
+				document.getElementById('result1_age').innerHTML = 'Your age: ' + age;
+			}
+
+			document.getElementById('butn').addEventListener('click', Result);
+		</script>
+	</body>
+</html>
